@@ -1,0 +1,160 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#007ACC",
+          "foreground": "#222222",
+          "properties": {
+            "style": "austin",
+            "threshold": 321
+          },
+          "style": "plain",
+          "template": " {{ .FormattedMs }} ",
+          "type": "executiontime"
+        },
+        {
+          "background": "#ffcc88",
+          "foreground": "#222222",
+          "style": "plain",
+          "template": "\uf0e7",
+          "type": "root"
+        },
+        {
+          "background": "#333333",
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": " 📦 ",
+          "type": "os"
+        },
+        {
+          "background": "#ffffff",
+          "foreground": "#ff4015",
+          "style": "plain",
+          "template": " {{ if .SSHSession }}\uf817 {{ end }}",
+          "type": "session"
+        },
+        {
+          "background": "#444444",
+          "foreground": "#ffffff",
+          "properties": {
+            "folder_icon": "📂",
+            "style": "mixed"
+          },
+          "style": "plain",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#f5f5f5",
+          "foreground": "#1f1f1f",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf594 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
+          },
+          "style": "plain",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}  ",
+          "type": "git"
+        },
+        {
+          "background": "#7014eb",
+          "foreground": "#ffffff",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "plain",
+          "template": " \ue77f ",
+          "type": "dotnet"
+        },
+        {
+          "background": "#60a1b1",
+          "foreground": "#ffffff",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "plain",
+          "template": "  ",
+          "type": "go"
+        },
+        {
+          "background": "#f6553c",
+          "foreground": "#ffffff",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "plain",
+          "template": "  ",
+          "type": "swift"
+        },
+        {
+          "background": "#1d62b1",
+          "foreground": "#ffffff",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "plain",
+          "template": " R ",
+          "type": "r"
+        },
+        {
+          "background": "#313131",
+          "foreground": "#ffffff",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "  ",
+          "type": "python"
+        },
+        {
+          "background": "#d04832",
+          "foreground": "#ffffff",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "plain",
+          "template": "  ",
+          "type": "rust"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#7fff6e",
+          "foreground_templates": ["{{ if gt .Code 0 }}#f1184c{{ end }}"],
+          "style": "plain",
+          "template": "{{.Name}} {{ if gt .Code 0 }} {{end}}",
+          "type": "shell",
+          "properties": {
+            "mapped_shell_names": {
+              "pwsh": "\u276f",
+              "shell": "\u276f",
+              "cmd": ">",
+              "lua": ">",
+              "nu": ":)",
+              "fish": "~>",
+              "zsh": "❯  ",
+              "bash": "❯  "
+            }
+          }
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
