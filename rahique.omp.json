@@ -40,7 +40,7 @@
           "background": "#444444",
           "foreground": "#ffffff",
           "properties": {
-            "folder_icon": "📂",
+            "folder_icon": "\uf07b",
             "style": "mixed"
           },
           "style": "plain",
@@ -137,7 +137,7 @@
           "foreground": "#7fff6e",
           "foreground_templates": ["{{ if gt .Code 0 }}#f1184c{{ end }}"],
           "style": "plain",
-          "template": "{{.Name}} {{ if gt .Code 0 }} {{end}}",
+          "template": "{{.Name}} {{ if gt .Code 0 }}{{end}}",
           "type": "shell",
           "properties": {
             "mapped_shell_names": {
