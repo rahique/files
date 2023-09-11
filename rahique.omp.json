@@ -68,7 +68,7 @@
         },
         {
           "background": "#7014eb",
-          "foreground": "#ffffff",
+          "foreground": "#242424",
           "properties": {
             "fetch_version": false
           },
@@ -77,8 +77,35 @@
           "type": "dotnet"
         },
         {
+          "type": "r",
+          "style": "plain",
+          "foreground": "blue",
+          "background": "lightWhite",
+          "template": " R {{ .Full }} "
+        },
+        {
+          "type": "dart",
+          "style": "plain",
+          "properties": {
+            "fetch_version": true
+          },
+          "foreground": "#242424",
+          "background": "#06A4CE",
+          "template": "  {{ .Full }}"
+        },
+        {
+          "foreground": "#100e23",
+          "background": "#ae93ff",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "  {{ .Full }}",
+          "type": "python"
+        },
+        {
           "background": "#60a1b1",
-          "foreground": "#ffffff",
+          "foreground": "#242424",
           "properties": {
             "fetch_version": false
           },
@@ -88,7 +115,7 @@
         },
         {
           "background": "#f6553c",
-          "foreground": "#ffffff",
+          "foreground": "#242424",
           "properties": {
             "fetch_version": false
           },
@@ -98,7 +125,7 @@
         },
         {
           "background": "#1d62b1",
-          "foreground": "#ffffff",
+          "foreground": "#242424",
           "properties": {
             "fetch_version": false
           },
@@ -107,26 +134,45 @@
           "type": "r"
         },
         {
-          "background": "#313131",
-          "foreground": "#ffffff",
-          "properties": {
-            "fetch_version": true
-          },
+          "type": "node",
           "style": "plain",
-          "template": "  ",
-          "type": "python"
+          "foreground": "#242424",
+          "background": "#f0dc4e",
+          "template": "  "
         },
         {
           "background": "#d04832",
-          "foreground": "#ffffff",
+          "foreground": "#242424",
           "properties": {
             "fetch_version": false
           },
           "style": "plain",
           "template": "  ",
           "type": "rust"
+        },
+        {
+          "type": "php",
+          "style": "powerline",
+          "foreground": "#242424",
+          "background": "#4063D8",
+          "template": "  "
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#242424",
+          "background": "#ffff66",
+          "template": "  "
         }
       ],
+
       "type": "prompt"
     },
     {
