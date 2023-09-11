@@ -1,14 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+source $HOME/.aliases
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-eval "$(oh-my-posh init zsh --config /home/rahique/ohmyposh-theme/tiwahu.omp.json)"
+eval "$(oh-my-posh init zsh --config /home/rahique/ohmyposh-theme/rahique.omp.json)"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# custom
+#cusotm alias
 alias ls="logo-ls"
 alias la="logo-ls -a"
 alias ll="logo-ls -1"
@@ -107,12 +107,22 @@ alias c="clear"
 alias q="exit"
 alias bat="batcat --paging never"
 alias rp="gh repo list"
-#cusotm alias
+alias rc="rustc"
 function mkrp(){
   gh repo create "$1" --"$2" --source=. --remote=upstream
+}
+function del(){
+  find . ! -name ""$1"" -type f -exec rm "$2" {} \;
 }
 # ubuntu icon
 # https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/rahique/.bun/_bun" ] && source "/home/rahique/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
