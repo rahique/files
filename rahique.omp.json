@@ -23,7 +23,7 @@
           "type": "root"
         },
         {
-          "background": "#333333",
+          "background": "#151515",
           "foreground": "#ffffff",
           "style": "plain",
           "template": " 📦 ",
@@ -37,14 +37,14 @@
           "type": "session"
         },
         {
-          "background": "#444444",
+          "background": "#af2a2c",
           "foreground": "#ffffff",
           "properties": {
-            "folder_icon": "\uf07b",
+            "folder_icon": "",
             "style": "mixed"
           },
           "style": "plain",
-          "template": " {{ .Path }} ",
+          "template": " {{.Path}} ",
           "type": "path"
         },
         {
@@ -81,7 +81,7 @@
           "style": "plain",
           "foreground": "blue",
           "background": "lightWhite",
-          "template": " R {{ .Full }} "
+          "template": " R "
         },
         {
           "type": "dart",
@@ -92,16 +92,6 @@
           "foreground": "#242424",
           "background": "#06A4CE",
           "template": "  {{ .Full }}"
-        },
-        {
-          "foreground": "#100e23",
-          "background": "#ae93ff",
-          "properties": {
-            "fetch_version": true
-          },
-          "style": "plain",
-          "template": "  {{ .Full }}",
-          "type": "python"
         },
         {
           "background": "#60a1b1",
@@ -122,16 +112,6 @@
           "style": "plain",
           "template": "  ",
           "type": "swift"
-        },
-        {
-          "background": "#1d62b1",
-          "foreground": "#242424",
-          "properties": {
-            "fetch_version": false
-          },
-          "style": "plain",
-          "template": " R ",
-          "type": "r"
         },
         {
           "type": "node",
@@ -159,17 +139,17 @@
         },
         {
           "type": "python",
-          "style": "plain",
+          "style": "powerline",
           "foreground": "#100e23",
           "background": "#906cff",
           "template": "  {{ .Full }} "
         },
         {
-          "type": "root",
+          "type": "angular",
           "style": "plain",
-          "foreground": "#242424",
-          "background": "#ffff66",
-          "template": "  "
+          "foreground": "#100e23",
+          "background": "#c22f29",
+          "template": "  "
         }
       ],
 
